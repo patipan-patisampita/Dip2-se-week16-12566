@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_week16/square.dart';
 
 class ListViewDemo extends StatelessWidget {
   const ListViewDemo({super.key});
@@ -6,15 +7,12 @@ class ListViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
-              color: Colors.deepPurple[200],
-            ),
-          ),
+          MySquare(),
+          MySquare(),
+          MySquare(),
+          MySquare(),
         ],
       ),
     );
