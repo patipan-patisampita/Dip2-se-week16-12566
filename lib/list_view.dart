@@ -15,12 +15,18 @@ class ListViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount: _posts.length,
-        itemBuilder: (context, index) {
-          print(index);
-          return MySquare(child: _posts[index]);
-        },
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: _posts.length,
+              itemBuilder: (context, index) {
+                print(index);
+                return MySquare(child: _posts[index]);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
