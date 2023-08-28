@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MySquare extends StatelessWidget {
-  const MySquare({super.key});
+  final String child;
+  const MySquare({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,14 @@ class MySquare extends StatelessWidget {
       child: Container(
         height: 200,
         color: Colors.deepPurple[800],
+        child: Builder(builder: (context) {
+          return Center(
+            child: Text(
+              child,
+              style: TextStyle(fontSize: 40),
+            ),
+          );
+        }),
       ),
     );
   }
